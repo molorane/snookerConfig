@@ -1,0 +1,86 @@
+# Default profile: this will apply to all the profiles
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  flyway:
+    enabled: false
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+logging:
+  file: /var/log/levels-service-log/api.log
+server:
+  port: 9001
+  compression:
+    enabled: true
+    mime-types: text/html, text/css, text/plain, application/json
+
+denomination:
+  name: Deeper Christian Life Ministry South Africa
+  abv: DCLM
+  country: Nigeria
+  founder: William Fulio Kumuyi
+  startDate: 1973-01-01
+  hq: Abujar
+  gpsLat: 9.0962524
+  gpsLong: 7.2822984
+  logo: 2014098618.jpg
+  mission: Your Spiritual Welfare is our concern
+---
+
+# Local profile
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Blessing**4
+    url: jdbc:mysql://localhost:3306/seal?serverTimezone=UTC
+    username: root
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+---
+
+# test profile
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Blessing**4
+    url: jdbc:mysql://localhost:3306/seal?serverTimezone=UTC
+    username: root
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+---
+
+# Dev profile
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: L3v3l5DBu5r@11
+    url: jdbc:postgresql://10.55.66.11:5432/levels
+    username: levels
+
+# Put other profiles down here
