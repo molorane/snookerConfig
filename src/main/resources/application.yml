@@ -2,10 +2,9 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared #tells spring where to locate the config files
-  profiles:
-    active: native #we are using native because the config server uses a git repo by default
+        git:
+          uri: https://github.com/molorane/config-seal.git #tells spring where to locate the config files
+          cloneOnStart: true
   security:
     user:
       password: 1234 #the password which apps will use to access its configurations

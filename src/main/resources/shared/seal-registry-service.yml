@@ -1,3 +1,0 @@
-# Shared across all profiles
-server:
-  port: 8761 #the default port used for eureka servers
