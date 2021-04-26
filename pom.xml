@@ -8,10 +8,10 @@
 		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.dclm</groupId>
-	<artifactId>sealConfig</artifactId>
+	<groupId>org.blessy</groupId>
+	<artifactId>snookerConfig</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sealConfig</name>
+	<name>snookerConfig</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>16</java.version>

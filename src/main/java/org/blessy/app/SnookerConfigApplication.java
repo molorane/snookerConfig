@@ -1,4 +1,4 @@
-package org.dclm.sealConfig;
+package org.blessy.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class SealConfigApplication {
+public class SnookerConfigApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SealConfigApplication.class, args);
+		SpringApplication.run(SnookerConfigApplication.class, args);
 	}
 
 }

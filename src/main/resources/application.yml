@@ -3,13 +3,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/molorane/config-seal.git #tells spring where to locate the config files
+          uri: https://github.com/molorane/snooker-config.git #tells spring where to locate the config files
           cloneOnStart: true
+          password: Blessing**5NMM
+          username: molorane.mothusi@gmail.com
   security:
     user:
       password: 1234 #the password which apps will use to access its configurations
   application:
-    name: seal-config-service
+    name: snooker-config-service
 
 server:
   port: 7777 #the port where the config-server will be accessible
