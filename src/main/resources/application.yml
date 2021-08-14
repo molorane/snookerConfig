@@ -5,7 +5,7 @@ spring:
         git:
           uri: https://github.com/molorane/snooker-config.git #tells spring where to locate the config files
           cloneOnStart: true
-          password: Blessing**5NMM
+          password: Blessing**88NMM
           username: molorane.mothusi@gmail.com
   security:
     user:
